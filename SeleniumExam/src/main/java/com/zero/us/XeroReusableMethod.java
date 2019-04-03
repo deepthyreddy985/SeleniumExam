@@ -11,14 +11,15 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class XeroReusableMethod  {
 
-	static WebDriver driver;
+	protected static WebDriver driver;
 	static ExtentReports report;
-	static ExtentTest logger;
-	public static ExtentReports Initialize_path(String path)
+	protected static ExtentTest logger;
+	public static ExtentReports Initialize_path(String path) /*String TestScriptName*/
 	{
 		System.out.println("start");
 		//String path="C:\\ExtentReports\\xeroreports\\xeroReportTC1.html";
 		report=new ExtentReports(path,true);
+		
 		//report=new ExtentReports(path);
 		return report;
 	}
@@ -39,6 +40,7 @@ public class XeroReusableMethod  {
 				//LaunchUrl("https://login.xero.com/");
 //		logger=report.startTest("xero website");
 //		logger.log(LogStatus.INFO, "xero application is launched");
+			driver.manage().window().maximize();
 	}	
 	public static void entertext(WebElement element, String textval) throws InterruptedException
 	{

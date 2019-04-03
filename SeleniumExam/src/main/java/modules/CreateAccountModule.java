@@ -1,10 +1,14 @@
-package com.zero.us;
+package modules;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import com.relevantcodes.extentreports.LogStatus;
+import com.zero.us.XeroReusableMethod;
+
 public class CreateAccountModule extends XeroReusableMethod{
+	
 	public void TC2_signupto_XDC() throws InterruptedException
 	{
 		Initialize_Driver();
@@ -30,8 +34,8 @@ public class CreateAccountModule extends XeroReusableMethod{
 		Select country= new Select(driver.findElement(By.xpath("//select[@name='LocationCode']")));
 		country.selectByValue("United States");
 		//select captcha
-		WebElement recaptchacheckbox=driver.findElement(By.id("recaptcha-anchor-label"));
-		ClickObject(recaptchacheckbox);
+//		WebElement recaptchacheckbox=driver.findElement(By.id("recaptcha-anchor-label"));
+//		ClickObject(recaptchacheckbox);
 		//select terms and conditions
 		WebElement terms=driver.findElement(By.xpath("//label[@class='form-label text']"));
 		SelectCheckBox(terms, "i have read and i agree to the terms and offers");
@@ -127,6 +131,18 @@ public class CreateAccountModule extends XeroReusableMethod{
 		WebElement accountantlink=driver.findElement(By.xpath("//a[contains(text(),'accountant or bookkeeper')]"));
 		ClickObject(accountantlink);
 		//Thread.sleep(3000);	
+		endReport();
+	}
+	
+	public void TC5() throws InterruptedException
+	{
+
+		Initialize_Driver();
+		LaunchUrl("https://www.xero.com/us/");
+		Initialize_path("C:\\ExtentReports\\xeroreports\\xeroReportTC5.html");
+		CreateTestScript("TC5", "success");
+		System.out.println("Fail:there is no create account page");
+		logger.log(LogStatus.FAIL,"Create account page could not found");
 		endReport();
 	}
 	
