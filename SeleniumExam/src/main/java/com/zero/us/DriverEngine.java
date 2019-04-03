@@ -12,6 +12,8 @@ import modules.CreateAccountModule;
 import modules.Myzero;
 import modules.ProfileModule;
 import modules.uploadimage;
+import modules.Logout;
+import modules.CreateAccountTC5;
 
 
 
@@ -26,21 +28,27 @@ public class DriverEngine extends XeroReusableMethod  {
 //	a.TC1B_IncorrectPassword();
 //	a.TC1C_IncorrectEmail();
 //	a.TC1D_ForgotPassword();
-//	a.TC4();
+
 	 
-//	CreateAccountModule b=new CreateAccountModule();
+	CreateAccountModule b=new CreateAccountModule();
 //	b.TC2_signupto_XDC();
-//	b.TC2B_emptyfields();
-//	b.TC2C();
-//	b.TC2D();
-//	b.TC2E();
-//	b.TC5();
+	//b.TC2B_emptyfields();
+	b.TC2C();
+	b.TC2D();
+	b.TC2E();
 	
-//	ProfileModule c=new ProfileModule();
-//	c.TC3();
-//	
-//	uploadimage d=new uploadimage();
-//	d.TC6();
+	
+	ProfileModule c=new ProfileModule();
+	c.TC3();
+		
+	Logout d=new Logout();
+	d.TC4();
+	
+	CreateAccountTC5 e=new CreateAccountTC5();
+	e.TC5();
+	
+	uploadimage f=new uploadimage();
+	f.TC6();
 //	
 //	Myzero e=new Myzero();
 //	e.TC8A();
@@ -49,8 +57,8 @@ public class DriverEngine extends XeroReusableMethod  {
 //	e.TC8E();
 //	e.TC8F();
 //	
-	AddAnotherOrgTC10 f=new AddAnotherOrgTC10();
-	f.TC10_bills();
+	AddAnotherOrgTC10 g=new AddAnotherOrgTC10();
+	g.TC10_bills();
 	
 	
 }

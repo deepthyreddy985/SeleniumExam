@@ -3,7 +3,7 @@ package modules;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import image.*;
+
 
 import com.zero.us.XeroReusableMethod;
 
@@ -50,7 +50,7 @@ Thread.sleep(3000);
 
 //WebElement browsePhoto=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='filefield-1188-button-fileInputEl']")));
 WebElement browse=driver.findElement(By.xpath("//input[@name='file']"));
-browse.sendKeys("C:\\Users\\venka\\git\\SeleniumExam\\SeleniumExam\\src\\main\\java\\image\\20140308_064121000_iOS.jpg");
+browse.sendKeys("C:\\Users\\venka\\Desktop\\20140308_064121000_iOS.jpg");
 Thread.sleep(3000);
 
 
