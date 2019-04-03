@@ -18,7 +18,7 @@ public class XeroReusableMethod  {
 	{
 		System.out.println("start");
 		//String path="C:\\ExtentReports\\xeroreports\\xeroReportTC1.html";
-		report=new ExtentReports(path,true);
+		report=new ExtentReports(System.getProperty("user.dir")+"/test-output/XEROExtentReports.html",true);
 		
 		//report=new ExtentReports(path);
 		return report;
